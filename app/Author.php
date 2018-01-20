@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Author extends Model
 {
 	public $timestamps = false;
-    protected $table = 'author';
+    protected $table = 'authors';
 
     protected $fillable = [
         'name', 'lastname', 'tel', 'nit'
     ];
 
-    public function book()
+    public function books()
     {
-        return $this->belongsToMany('App\Book','book_author','id_author','id_book');
+        return $this->belongsToMany('App\Book');
     }
 
 }

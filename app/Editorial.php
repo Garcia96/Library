@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Editorial extends Model
 {
 	public $timestamps = false;
-    protected $table = 'editorial';
+    protected $table = 'editorials';
 
     protected $fillable = [
         'name', 'tel', 'address'

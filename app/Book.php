@@ -7,19 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
 	public $timestamps = false;
-    protected $table = 'book';
+    protected $table = 'books';
 
     protected $fillable = [
         'title', 'price', 'author_id', 'editorial_id', 'date'
     ];
 
-    public function Editorial()
+    public function editorial()
     {
         return $this->belongsTo('App\Editorial');
     }
 
-    public function Author()
+    public function authors()
     {
-        return $this->belongsToMany('App\Author','book_author','id_book','id_author');
+        return $this->belongsToMany('App\Author');
     }
 }

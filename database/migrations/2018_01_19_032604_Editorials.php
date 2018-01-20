@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Editorial extends Migration
+class Editorials extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Editorial extends Migration
      */
     public function up()
     {
-        Schema::create('editorial', function (Blueprint $table) {
+        Schema::create('editorials', function (Blueprint $table) {
         $table->increments('id');
         $table->string('name', 50);
         $table->string('tel', 15);
@@ -28,6 +28,6 @@ class Editorial extends Migration
      */
     public function down()
     {
-         Schema::drop('editorial');
+         Schema::drop('editorials');
     }
 }
